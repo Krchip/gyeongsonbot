@@ -1,0 +1,10 @@
+# Packages
+node_modules
+
+# Json
+package-lock.json
+config.json
+
+# Js
+shopnotice.js
+verifybot.js
