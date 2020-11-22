@@ -18,3 +18,5 @@
 > eval(commands/eval.js) : [Wonderbot](https://github.com/wonderlandpark/wonderbot)
 > 
 > purge(commands/purge.js) : [Miya](https://github.com/CwhiteKJ/Miya)
+>
+> hangang(commands/hangang.js) : [Miya](https://github.com/CwhiteKJ/Miya)
