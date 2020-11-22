@@ -17,4 +17,4 @@
 ## 경손봇은 어떤 소스를 참고했나요?
 > eval(commands/eval.js) : [Wonderbot](https://github.com/wonderlandpark/wonderbot)
 > 
-> purge(commands/purge.js) : [Miya](https://github.com/WhiteKJ/Miya)
+> purge(commands/purge.js) : [Miya](https://github.com/CwiteKJ/Miya)
