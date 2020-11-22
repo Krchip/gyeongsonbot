@@ -12,7 +12,7 @@
 경손봇 공식 디스코드 도 가입해주세요!
 
 ## 경손봇 오류를 발견했어요, 어디로 제보해야하죠?
-깃허브 이슈와 PR 을 넣어주셔도 상관없어요!
+깃허브 이슈와 PR 을 넣어주세요!
 
 ## 경손봇은 어떤 소스를 참고했나요?
 > eval(commands/eval.js) : [Wonderbot](https://github.com/wonderlandpark/wonderbot)
