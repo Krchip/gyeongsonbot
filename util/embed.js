@@ -1,28 +1,32 @@
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed } = require("discord.js")
 
-module.exports.sendDenied = async (channel) => {
+module.exports.denyofuse = async (message, permission) => {
     let embed = new MessageEmbed()
-    .setTitle("명령어 사용이 불가능 합니다.")
-    .setColor("RED")
-    .setDescription("죄송하지만, 해당 명령어를 실행할 권한이 존재하지 않습니다.")
-    .setFooter("명령어 사용이 거부되었어요!")
-    await channel.send(embed)
+        .setDescription("사용자의 권한이 부족합니다.")
+        .setColor("RED")
+        .setFooter("요구 권한: " + permission)
+    message.channel.send({ embed: embed })
 }
 
-module.exports.sendError = async (text, channel) => {
+module.exports.unexpectedError = async (message, error) => {
     let embed = new MessageEmbed()
-    .setTitle("오류가 발생했어요.")
-    .setColor("RED")
-    .setDescription(text)
-    .setFooter("뭔가 오류가 발생했네요...")
-    await channel.send(embed)
+        .setDescription("예기치 않은 오류가 발생했습니다.\n```\n" + error + "\n```")
+        .setColor("RED")
+        .setFooter("오류가 계속 발생한다면 아래 지원 서버로 문의해주세요.")
+    message.channel.send("https://discord.gg/4uwv3UVEwv", { embed: embed })
 }
 
-module.exports.equalPerms = async (text, channel) => {
-    let embed = new MessageEmbed()
-    .setTitle("봇의 권한이 부족해요.")
-    .setColor("RED")
-    .setDescription("봇이 해당 명령어를 수행할 권한이 부족해요, 권한을 다시 확인해주세요!")
-    .setFooter("권한 부족")
-    await channel.send(embed)
+module.exports.invaildCommand = async (message, command) => {
+    let embed = new MessageEmbed().setDescription(`\`${command}\`가 올바른 명령어입니다.`).setColor("RED")
+    message.channel.send({ embed: embed })
+}
+
+module.exports.forbidden = async (message) => {
+    let embed = new MessageEmbed().setDescription("봇이 권한이 부족합니다.").setColor("RED")
+    message.channel.send({ embed: embed })
+}
+
+module.exports.send = async (message, text) => {
+    let embed = new MessageEmbed().setDescription(text).setColor("RED")
+    message.channel.send({ embed: embed })
 }

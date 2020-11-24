@@ -1,0 +1,7 @@
+{
+    "PREFIX": "경손아 ",
+    "OWNERS": ["오너 아이디"],
+    "TERMINAL": "로그 전송 채널 아이디",
+    "BOT_TOKEN": "디스코드 봇 토큰",
+    "KOREANBOTS_TOKEN": "KOREANBOTS 토큰"
+}
