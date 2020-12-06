@@ -1,8 +1,7 @@
 /node_modules/
-/config.json
+config.json
 /package-lock.json
 /.vscode/
-/.git/
 
 # Someting 
 /commands/shopnotice.js
