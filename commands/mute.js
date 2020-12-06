@@ -11,7 +11,7 @@ module.exports = {
         let args = message.content.substring(PREFIX.length).split(" ")
 
         let member = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[1]))
-        if (!member) return error.say(message, "요청하신 유저를 찾을 수 없어요. 다시 시도해주세요.")
+        if (!member) return error.send(message, "요청하신 유저를 찾을 수 없어요. 다시 시도해주세요.")
 
         let role = message.guild.roles.cache.find((role) => role.name === MuteName)
         let muteembed = new Discord.MessageEmbed()
@@ -20,7 +20,7 @@ module.exports = {
             .setDescription("이 뮤트에 이의가 있으신경우, 해당 뮤트를 한 관리자에게 문의해주세요.")
             .setTimestamp()
 
-        if (!role) return error.say(message, "`뮤트` 역할이 서버에 존재하는지 확인해주세요.")
+        if (!role) return error.send(message, "`뮤트` 역할이 서버에 존재하는지 확인해주세요.")
 
         let hasrole = member.roles.cache.find((r) => r.name === MuteName)
         if (!hasrole) {

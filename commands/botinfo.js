@@ -11,6 +11,7 @@ module.exports = {
 호스팅: Discloud
 
 주요 서비스: 관리
+
 명령어 접두사: \`경손아 \`
 
 봇 초대링크: [이곳을 눌러 초대](https://discord.com/oauth2/authorize?client_id=764909529845596190&permissions=470281463&scope=bot)

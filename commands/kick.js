@@ -3,7 +3,7 @@ const error = require("../util/embed")
 module.exports = {
     name: "추방",
     description: "추방 커맨드",
-    excute(client, message) {
+    excute(_, message) {
         if (!message.member.hasPermission("KICK_MEMBERS")) return error.denyofuse(message, "KICK_MEMBERS")
         let args = message.mentions.members.first()
 
