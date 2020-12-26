@@ -3,8 +3,8 @@ const database = {
     connection: {
         host: "localhost",
         user: "root",
-        password: "chip10290#",
-        database: "gyeongson",
+        password: "password",
+        database: "database",
     },
 }
 
